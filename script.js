@@ -1,28 +1,29 @@
 function volume_sphere() {
     //Write your code here
 	function volume_sphere() {
-    // Get the radius value from input
+    // Fetch radius value as text
     let radius = document.getElementById("radius").value;
 
     // Convert to number
     radius = Number(radius);
 
-    // Validate: must be a number AND non-negative
+    // Validate input: must be a non-negative number
     if (isNaN(radius) || radius < 0) {
         document.getElementById("volume").value = "NaN";
         return;
     }
 
-    // Calculate volume: (4/3) * π * r^3
+    // Calculate volume of sphere
     let volume = (4 / 3) * Math.PI * Math.pow(radius, 3);
 
     // Round to 4 decimal places
     volume = volume.toFixed(4);
 
-    // Display the result
+    // Display result
     document.getElementById("volume").value = volume;
 }
 
+	
 
 
   

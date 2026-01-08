@@ -1,25 +1,18 @@
 <!DOCTYPE html>
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-<head>
-    <title>Sphere Volume Calculator</title>
-</head>
-
 <body>
-    <p>Input radius value and get the volume of a sphere.</p>
 
-    <form onsubmit="volume_sphere(); return false;">
-        <p>Radius</p>
-        <input type="text" id="radius">
+<h3>Input radius value and get the volume of a sphere.</h3>
 
-        <p>Volume</p>
-        <input type="text" id="volume" readonly>
+<label>Radius</label><br>
+<input type="number" id="radius"><br>
 
-        <br><br>
+<label>Volume</label><br>
+<input type="text" id="volume" readonly><br>
 
-        <button type="submit">Calculate</button>
-    </form>
+<input type="button" value="Calculate" onclick="let r=document.getElementById('radius').value;if(r===''||r<0){alert('Please enter a valid radius');return;}document.getElementById('volume').value=((4/3)*Math.PI*Math.pow(r,3)).toFixed(2);">
 
-    <script src="script.js"></script>
 </body>
 </html>
